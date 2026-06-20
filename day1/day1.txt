@@ -1,0 +1,41 @@
+HTML .> Root of the document
+HEAD ->Contains info about pages...for browser
+BODY -> Content => Visible part...workspace...working area of browser
+
+HEAD => META, LINK, SCRIPT, TITLE, BASEFONT
+
+Tag => Structure...(Starting tag, ending tag, container tag, empty tag)
+
+/ - forward slash
+\ - backward slash
+
+Attribute => Property/Feature
+align - left, right, center, justify
+
+heading tags => 6
+h1,h2,h3,h4,h5,h6
+
+heading tag - block level
+div - inline level
+
+PARAGRAPH - default margin and padding
+DIV - no default padding and margin
+
+&nbsp; - non-breaking space (HTML Entity)
+br- break rule
+hr- horizontal rule
+
+ol - ordered list <ol> <li></li> </ol>
+ol attributes - type, start, reversed
+
+ul - unordered list 
+ul attributes - type(disc,circle,square)
+ 
+tables-
+td can work as both empty tag as well as container tag
+colspan - to merge multiple columns
+rowspan - to merge multiple rows
+cellpadding - space btw border and cell
+cellspacing - space btw content and cell
+thead - when you want to give the same head row to every page
+tfoot - when you want to give the same foot row to every page

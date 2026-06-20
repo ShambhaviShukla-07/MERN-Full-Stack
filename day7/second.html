@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let students=["Ayush","Srijan","Aditya", "Anuj","Uttam","Brijmohan",[1,2,3,4,5,"BIT","Buddha"]];
+        console.log(students.length);
+        students.push("Manjesh");
+        console.log(students.length);
+        console.log(students);
+        students.pop();
+        students.unshift("Shreya")
+        console.log(students)
+        students.shift()
+        console.log(students)
+
+        for(let i=0;i<students.length;i++)
+            console.log((i+1)+ "-"+students[i])
+    </script>
+</body>
+</html>

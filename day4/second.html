@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /* Attribute Selector */
+        input[type=email]{
+            color: blue;
+            border:none;
+            border-bottom: 2px solid pink;
+            margin-bottom: 5px;
+            outline: none;
+            width: 100%;
+        }
+        input[type=radio]{
+            outline: 2px solid red;
+        }
+        /* We can create our own attributes as well */
+        input[reg=Shambhavi]{
+            width: 50%;
+            border: none;
+            border-bottom:2px double pink;
+        }
+        input[id=pass]{
+            color: blueviolet;
+            border: none;
+            border-bottom: 3px solid pink;
+        }
+        input:focus{
+            outline: 2px solid gold;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+        }
+        .first:hover{
+            border-color: red;
+            background-color: gold;
+            color: white;
+        }
+        div[roll="88"]{
+            color: red;
+        }
+        div:last-child{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input reg="Shambhavi" type="text" name="" id="" placeholder="Enter your name">
+        <br>
+        <br>
+        <input type="password" name="" id="pass" placeholder="Enter password">
+        <br><br>
+        <input type="email" name="" id="" placeholder="Enter email">
+        <br>
+        <input type="radio" name="" id="">
+        <br>
+        <input type="submit" value="Submit">
+        
+        <input type="reset" value="Clear">
+    </form>
+
+    <div class="first">Sonu</div>
+    <div class="second">Monu</div>
+</body>
+</html>

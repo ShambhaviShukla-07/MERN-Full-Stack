@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x= ()=>{
+            console.log("Hello x, how are you");
+            return "HEY";
+        }
+        let array=[22,33,x,55];
+        console.log(array[2]);      // to access the function that is inside an array   
+        //output - 
+        // ()=>{
+        //     console.log("Hello x, how are you");
+        //     return "HEY";
+        // }
+        console.log(array[2]());    // to call the function that is inside an array     - Output - Hello x, how are you
+        //Returns HEY
+    </script>
+</body>
+</html>

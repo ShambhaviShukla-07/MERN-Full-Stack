@@ -1,0 +1,25 @@
+#full{
+    border: 5px solid red;
+}
+/* descendent selector */
+/* div p{
+    color: blue;
+} */
+/* child selector
+.first > .outerdiv{
+    color: purple;
+} */
+/* nhi kaam krega
+.first > .innerp{
+    color: purple;
+}  */
+
+/* adjacent sibling selector */
+/* h1 + p {
+    color:rgb(212, 10, 64);
+} */
+
+/* general sibling selector */
+h1 ~ p{
+    background-color: brown;
+}

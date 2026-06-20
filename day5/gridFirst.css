@@ -1,0 +1,56 @@
+.container{
+    width: 500px;
+    height:500px;
+    border-left: 10px dotted;
+    border-top: 10px double;
+    border-right: 10px dashed;
+    border-bottom: 10px solid;
+    display: grid;
+    /* grid-template-columns: 200px 100px 50px 1fr; */
+    /* grid-template-columns: 200px 1fr 1fr; */
+    /* grid-template-columns: 50% 1fr 1fr 1fr 1fr 1fr ; */
+    /* grid-template-columns: 50% 1fr 1fr 25% 1fr; */
+    grid-template-columns: repeat(5,1fr) 2fr;
+    grid-template-rows : 1fr 50px 1fr 1fr 10%;
+}
+.box{
+    border: 2px solid red;
+}
+.five{
+    background-color: blueviolet;
+    color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.eight{
+    background-color: brown;
+    color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start:3;
+    grid-column-end: span 3;
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+.three{
+    order:1;
+    background-color: rgb(102, 206, 99);
+}
+.twentyOne{
+    order:2;
+    background-color: aquamarine;
+}
+.nine{
+    grid-column:4/6;
+    background-color: aqua;
+}
+.seven{
+    grid-area: 3/ 3 / 4 / 4;   
+    /* row start, column start, row end, column end */
+}

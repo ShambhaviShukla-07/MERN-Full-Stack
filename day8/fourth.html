@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user={
+            name: "Jalebi Bai",
+            kaam: "Jalebi Bechna"
+        };
+        console.log(user);
+        //FIRST WAY TO ACCESS THE VALUES
+        console.log(user.name);
+        console.log(user.kaam);
+
+        //MODIFYING THE VALUES
+        user.name= "Madhu";
+        user.kaam= "Mad-hosh hona";
+
+        //ADDING NEW KEY-VALUE PAIRS
+        user.dhaam="Mad-hosh hoke sona";
+        console.log(user);
+        console.log(user.name);
+        console.log(user.kaam);
+        console.log(user.dhaam);
+
+        //SECOND WAY TO ACCESS THE VALUES
+        console.log(["name"])    //Prints in the form of an array
+
+        //DELETING ANY ATTRIBUTE
+        delete user.kaam;        //To delete the whole property
+        console.log(user);
+    </script>
+</body>
+</html>

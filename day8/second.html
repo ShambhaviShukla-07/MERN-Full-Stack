@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function abc(...a){     //... - REST OPERATOR 
+        //REST OPERATOR -        ARRAY BANA RHA HAI
+            console.log(a);
+        }
+        abc(22);                //[22]
+        abc(11,22);             //[11,22]
+        abc(11,22,33)           //[11,22,33]
+
+        function abc(a){     //... - REST OPERATOR 
+            console.log(a);
+        }
+        abc(22);                //22
+        abc(11,22);             //11
+        abc(11,22,33)           //11
+
+        let b=[11,22,33,44,55]
+        console.log(b);         // [11,22,33,44,55]
+        //SPREAD OPERATOR        - ARRAY KO TODNE K LIYE
+        console.log(...b);      // 11 22 33 44 55 without any array
+
+       
+    </script>
+</body>
+</html>

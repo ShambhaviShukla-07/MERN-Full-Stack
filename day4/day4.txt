@@ -1,0 +1,106 @@
+* - Universal selector
+, in group selector - for different elements that are not linked 
+. - for class
+# - for id
+id > class > tag > element priority for css selector
+
+sibling
+
+(DESCENDENT SELECTOR)
+div p{} - vo para jo div k andr baitha ho - be it directly or indirecdtly....jaise div k andr k div k andr k p pe bhi kaam krega---uske liye aise likhna hoga (div p) bss 
+
+(CHILD SELECTOR)
+div > p{} - vo para jo div ka immediate child ho - direct child hona chahiye
+div k andr div k andr k p pe ye kaam nhi krega
+
+(GENERAL SIBING SELCETOR) - "~" se represent hota hai
+h1~p -> h1 k baad jitne bhi p hain
+
+
+(ADJACENT SIBLING SELECTOR) - "+" se represent hote hain
+div + p -> div k just baad vale para pe kaam krega...div k baad agar 2 para hai to bss pehle para pe hi kaam krega (div pe bhi nhi krega)
+
+(ATTRIBUTE SELECTOR) - 
+input[type=email]
+
+(PSEUDO CLASS SELECTORS) - represented by ":" (poore element ko pakadta hai)
+- hover and focus
+
+(PSEUDO ELEMENT SELECTOR) - represented by "::" (sirf utna hi pakdega jitna hm log bata rhe)
+p::before ya p::after - jo content extra daalna hai
+
+div:first-child   -  vo div jo parent ka pehla child hai
+
+td:nth-child(even) - td jo tr ka nth oeven child ho
+
+border-collapse - cells k border mil jaayenge ek pass
+
+
+BOX MODEL ------
+
+border:2px solid;   default colour will be the color of text
+height - content pe depend krta hai
+width - by default 100% screen ki width hoti hai
+
+% - parent k relative measurement krta hai
+
+1- MARGIN - border aur parent k beech ka space
+margin - top right bottom left (clockwise)
+repetition- left to right then right to left
+top->right->bottom->left 
+ 10px 20px 30px  ---> top-10px, right--->20px, bottom--->30px, left--->20px
+
+2- BORDER - 
+border-radius bhi chaaro sides ka alag alag define kr skte hain jaise padding aur margin me krte hain
+l-t,t-r,r-b,b-l
+
+3- PADDING - border aur content k beech ka gap
+same margin jaise kaam krta hai (clockwise aur repitition left se right-right se left)
+
+
+outer content-> margin -> border -> padding -> content 
+
+FLEXBOX -------
+
+display: flex or flexbox (same)
+ - content  
+
+flex-direction 
+- row, column, column-reverse, row-reverse
+cross-axis - column-wise 
+default flex-direction is row
+
+flex-wrap: wrap (container ki width k hisab se content ko adjust krega)
+wrap , wrap-reverse
+
+justify-content aur align-items tbhi kaam krega jb display:flex hota hai
+
+justify-content ----> flex-direction k hisab se kaam rkega
+flex-start: start me chipakna
+flex-end: end me chipakna
+center: beech me laana
+space-around: kinare thoda space beech me barabar space
+space-between: kinare se chipka beech me gap
+space-evenly: kinare aur beech dono me equal space
+
+align-items ----> 
+flex-direction k cross-axis pe kaam krega 
+justify-content k opposite direction me kaam krega
+flex-start
+flex-end
+center
+
+order -
+ positive value mtlb baad me
+ negative value mtlb pehle
+ zero
+
+flex-flow ----> flex-direction + flex wrapping jaise column wrap
+
+align-self: selected item pe kaam krega jispe style lagata hai
+
+align-content ----> same 6 options justify-content k....align-items ka improved version
+
+p.first.last.second.fifth = <p class="first last second fifth "></p>
+
+p.first#last = <p class="first" id="last"></p>

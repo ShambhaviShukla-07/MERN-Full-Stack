@@ -1,0 +1,35 @@
+ncp for changing ip address for network
+placeholder to give hint to actually what is to be filled in the box
+passed data is shown through get method in form action
+saved data is not shown authenticating is done in post method in form action
+post does not work on local server
+action in form is where to pass the data
+in label never start id with numeric
+checkbox for multiple selection
+radio for single selection
+if value is not given then by default the value between the option tag in label is passes and used
+option is shown to user and the value is that which is going to be stored on the server
+to pass two values in select use multiple with required and then on server select one option and for the other option use ctrl+click 
+using size="size u want" is used to show only the size of the elements given in input is shown
+datetime-local is used to select both date and time and date only is used for date and time is only for time 
+input type = file name ="" id="student_image" accept 
+common on each webpage of website is done by header tag
+same footer tag does
+aside tag is used for sidebar
+some of the semantic tags are aside header footer article aside details main mark nav section summary etc
+figcaption figure ka caption
+mark highlights the text
+summary
+3 css are internal external inline
+key is attribute i.e. the value on which we are going to work
+class can be multiple
+id has highest priority, then class, then tag, elements
+style under the head tog only is called internal styling
+view width and view height
+width depend on screen size of body
+height depend on content size
+px is for fixed one
+% is for whole screen of body
+external css is to link other file of css into html and then apply effects to it done by link:href attribute in style of html title
+inline is inside the element only
+inline highest priority, internal, then external 

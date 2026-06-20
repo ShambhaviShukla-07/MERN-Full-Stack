@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let list=[11,22,33,44,55,66]
+        // Map Function of array - works as forEach but is faster
+        let double= list.map((n)=>{
+            // return n*2;               //returns [22,44,66,88,110,132]
+            if(n%2==0)
+                return n*2               // return [undefined,44,undefined,88,undefined,132]
+        })
+        console.log(double)
+
+        let d=list.map((no)=> no*2);
+        console.log(d);
+
+        let l=[11,22,33,44,55,66];
+        // Filter Function - works on the basis of a condition
+        let even=l.filter((num)=>num%2==0);   //array
+        console.log(even);
+        //Find Function - returns the first element that satisfies a given condition
+        let finding=l.find((num)=>num%2==0);  //variable
+        console.log(finding);
+        //FINDINDEX Function - returns in a variable, the index of first element that satisfies a given condition 
+        //returns -1 if no such index
+        let findIndex = l.findIndex((num)=>num>40);
+        console.log(findIndex);
+    </script>
+</body>
+</html>

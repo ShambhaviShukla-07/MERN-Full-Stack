@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let names=["Sonu","Monu","Birju","Kaju","Raju"]
+        console.log(names)
+
+        // forEach() using callback function
+        names.forEach(function(name,index){
+            console.log(index + " - " +name);
+        });
+
+        // forEach() using arrow function
+        names.forEach((n)=>{
+            console.log(n);
+        });
+
+        // for using for of
+        for(let name of names)
+            console.log(name);
+
+        // for using 2 values
+        names.forEach((element,index)=>{
+            console.log(index,"---",element);
+        });
+
+        names.forEach((e,i)=>{
+            if(i%2==1){
+                console.log((i+1)+" - " + e);
+            }
+        });
+
+</script>
+</body>
+</html>

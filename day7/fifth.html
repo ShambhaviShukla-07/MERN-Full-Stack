@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let xyz=[11,22,33,44,55,66,77,88,99,111]
+        let spl=xyz.splice(2,5);
+        console.log("Spliced values: "+spl);        //33,44,55,66,77
+        console.log("New data after removal: "+xyz) //11,22,88,99,111
+
+        let splAgain=xyz.splice(3,2)
+        console.log("Spliced values: "+splAgain);        //99,111
+        console.log("New data after removal: "+xyz)      //11,22,88
+
+        let insert=xyz.splice(1,0,98,87,76,64);
+        console.log("Removed value: "+insert);           //empty
+        console.log("New data after insertion: "+xyz);   //11,98,87,76,64,22,88
+
+        let update=xyz.splice(1,3,"Bholu","Birju","Sholu");
+        console.log("Updated value: "+update);           //98,87,76
+        console.log("New data after updation: "+xyz);    //11,Bholu,Birju,Sholu,64,22,88
+
+        let list=[11,22,33,44,55,66]
+        // Map Function of array - works as forEach but is faster
+        let double= list.map((n)=>{
+            // return n*2;               //returns [22,44,66,88,110,132]
+            if(n%2==0)
+                return n*2               // return [undefined,44,undefined,88,undefined,132]
+        })
+        console.log(double)
+    </script>
+    </script>
+</body>
+</html>

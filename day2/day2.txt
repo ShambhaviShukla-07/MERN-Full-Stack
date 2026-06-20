@@ -1,0 +1,36 @@
+../ day 2 inside day 2.1 can access called relative path
+directory is day2 and sub directory is day2.1
+. current directory
+../ sub directory
+/ going to access the root i.e. day2
+data is known from where to take relative
+alt stands for alternative text
+/ or copying url from the chrome or the name of file from start to end  absolute direct access
+../  or .. or drectly the name of the folder is relative
+in case img is missing then alt text is shown
+it is better to use relative path always
+links are rectangle circle and polygon
+only /nmeans absolute
+parent pop self three ways to call out in target
+self jaha click kiya jis tab m wahi open ho jayega link through anchor tag
+subset of a webpage is iframe
+top sbse bahar i.e. browser
+parent accessing file gets open
+blank means open on new tab
+
+
+USEMAP ATTRIBUTE INSIDE IMAGE TAG, MAP TAG INSIDE IMAGE TAG, AREA TAG INSIDE MAP TAG, coords ATTRIBUTE INSIDE AREA TAG, shape ATTRIBUTE INSIDE AREA TAG
+
+rect: Rectangle area. coords="x1,y1,x2,y2" (top-left and bottom-right corners).
+circle: Circular area. coords="centerX,centerY,radius" (center point and radius).
+poly: Custom polygon area. coords="x1,y1,x2,y2,x3,y3..." (multiple vertices).
+
+Units: coords only uses pixel values (numbers). No px, %, em, rem, etc. are allowed. ✔️ 50,100,200,300 ❌ 50px,100px or 10%,20%.
+
+usemap k area me : 
+coords="50,100,200,300"         VALID
+coords me px,%,em,rem ye sb invalid hota hai
+coords="50px,100px,200px,300px" INVALID
+coords="10%,20%,30%,40%"        INVALID
+coords="5em,10em,15em,20em"     INVALID
+coords="2rem,4rem,6rem,8rem"    INVALID

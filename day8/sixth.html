@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //SPREAD OPERATOR - to update data
+
+        const user={
+            name:"Birju",
+            role:"User"
+        };
+
+        const updatedUser={
+            ...user,
+            role:"Admin",
+            city:"Gorakhpur"
+        };
+
+        console.log(updatedUser);
+        user.name="Arju";
+        console.log(user);
+
+        //the whole const object cannot be changed but its attributes can be changed even if the object is const
+
+        //YOU CANNOT CHANGE THE TYPE OF ANY CONST VARIABLE BUT YOU CAN CHANGE THE VALUES INSIDE IT WITHOUT CHANGING ITS TYPE
+        //user="HALALALALU";
+
+        //YOU CANNOT CHANGE THE WHOLE EXISTING OBJECCT INTO ANOTHER OBJECT
+        // updatedUser={
+        //     naam:"JalebiBai",
+        //     kaam:"Jalebi Banana"
+        // };
+        console.log(updatedUser);
+
+
+        //Agar object ka destruction kr rhe const me memory allocate kr k to uss new destructed value ko change nhi kr skte but object k andr usko change kr skte hain
+        const user1={
+            name:"Birju",
+            role:"User"
+        };
+        user1.name="Arjun";
+        console.log(user1);        //{name: 'Arjun', role: 'User'}
+
+        const {role} = user1;
+        // role="Admin";           Wrong
+        user1.role="Admin";       
+        console.log(user1)         // {name: 'Arjun', role: 'Admin'}
+    </script>
+</body>
+</html>

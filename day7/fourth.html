@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        xyz=[11,22,33,44,55]
+        xyz[7]="Bholu"
+        console.log(xyz.length + " - "+ xyz)
+        console.log(xyz[4])   //55
+        console.log(xyz[5])   //undefined
+        console.log(xyz[6])   //undefined
+        console.log(xyz[7])   //Bholu
+
+        console.log(xyz.pop())  //Bholu will be popped
+        console.log(xyz.pop())  //undefined will be popped(empty cell will be deallocated)
+        // console.log(xyz.pop())  //undefined will be popped(empty cell will be deallocated)
+        console.log(xyz.pop())  //55 will be popped
+
+        console.log(xyz.includes(55)) ; //output will be true
+
+        abc=[11,22,22,5,33,4,5]
+        abc[10]="Bholu"
+        console.log(abc.length + " - "+ abc)
+        console.log(abc.includes(undefined))    //true
+        console.log(abc.indexOf(5))             //3
+        console.log(abc.indexOf("Bholu"))       //10
+
+        console.log(abc.indexOf(10))            //-1
+
+        console.log(abc.lastIndexOf(5))         //6
+        console.log(abc.lastIndexOf(10))        //-1
+
+        console.log(abc)
+        // (11) [11, 22, 22, 5, 33, 4, 5, empty × 3, 'Bholu']
+        let separate=abc.slice(5,-1)
+        console.log(separate)
+        separate=abc.slice(3,7)   //slice(start,end-1)
+        console.log(separate)
+
+    </script>
+</body>
+</html>

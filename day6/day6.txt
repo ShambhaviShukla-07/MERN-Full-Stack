@@ -1,0 +1,83 @@
+var - globally accessible - global/function scoped - redeclaration allowed
+var - (HOISTING) --> initialization before declaration is acceptable <---- (HOISTING)
+a="BIT"
+var a="Buddha"
+
+let - not accessible globally - block scoped - redeclaration not allowed
+let - no initialization before declaration
+a="BIT"
+let a="Buddha"
+
+const - can be global or local scoped - cannot be assigned again once declared
+const variable should be initialized(or assigned) at the time of declaration else it will generate an error
+const - redeclaration is allowed
+
+it is good to put ; after every line of code because when the JS file is minified, it starts showing error
+
+document.write() prints everything on the workspace
+console.log() prints everything on the console
+console.err() - in red
+console.debug()
+console.warn() - in yellow
+
+HOISTING -
+
+jitne bhi declarations hote hain unko JS compilation se pehle heap memory me store kr deta hai jisse declarations top of the file chale jaate hain - isi ko hoisting kehte hain
+if something is being defined before its declaration, this is called hoisting, and is done using var only(not let)
+Example-
+    console.log(a);
+    a=11;
+    console.log(a)
+    var a
+• var is hoisted and initialized with undefined.
+• let and const are hoisted but placed in the Temporal Dead Zone (TDZ) until their declaration line is executed.
+
+Hoisting in JavaScript is the behavior where declarations are processed before code execution, making them appear as if they are “moved” to the top of their scope.
+
+Here’s the essential breakdown:
+• Variable and function declarations are hoisted.
+• Initializations are NOT hoisted.
+• var is hoisted and initialized with undefined.
+• let and const are hoisted but placed in the Temporal Dead Zone (TDZ) until their declaration line is executed.
+• Function declarations are fully hoisted (you can call them before they appear in code).
+• Function expressions are NOT hoisted like functions — only the variable declaration is.
+
+
+.length - to find length of array, object, strings etc
+
+querySelector can access elements with different class names, ids, and tag names
+
+function ka output - return
+when no return is given then it prints undefined automatically in console when stored in a variable
+
+ARROW Function/LAMBDA Function - 
+=> is used to represent arrow function
+no need to write return
+let sum=()=>{ }
+
+typeof() - used to return the type of variable
+boolean uses true/false (not True/False)
+
+
+* operator when used with string that holds any number, converts the string into number automatically and gives the output as a number
+a='11'   (typeof(a) - string)
+print(a*2) ----> 22 (typeof(a*2) - number)
+-,/ also do not give error
+but + concatenates the string and the number
+
+a+5 - simply concatenates a+5 = 115
+
+prompt - to take input from webpage
+alert - to give alert on the webpage
+
+Function Expression - 
+
+ let bru= function() {
+            console.log("This is an arrow function");
+        }
+
+IIFE can be used only once 
+// Immediately Invoked Function Expression -IIFE
+        (function(){
+            console.log("IBiahvruahubhaeiro");
+        })();

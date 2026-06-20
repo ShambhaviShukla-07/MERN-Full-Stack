@@ -1,0 +1,275 @@
+REDUCE(function(),initialValue) - (if no initial value is given then it takes the first value of the array as the initial value)
+Gives the summary of any array....
+can do sum of the elements of array
+can give the average of the elements of array
+can give sum based on some conditions(like sum of numbers at even position)
+        let a =[9,2,3,4,5];
+        let result=a.reduce(function(sum,num){   //sum-initial value(0) and num is every element inside array a
+            return sum + num;
+        },0);      //Initial values starts from 0
+        console.log(result);           // 23
+        //Accumulator has an initial value of 0 and then starts storing everything inside it
+        let res=a.reduce((s,num)=>{
+            return s+num
+        },0);
+        console.log(res);              // 23
+
+        let r=a.reduce(function(sum,no){
+            if(no%2==0)
+                return sum+no
+            return sum 
+        });                            //INITIAL value - 9 (the first value in the array)
+        console.log(r);                // 15
+
+ACCUMULATOR - Accumulator has an initial value of 0 and then starts storing everything inside it
+
+ARRAY - 
+typeof(a) = object
+To find if the object is array only, use - Array.isArray(a)
+gives true if it is an array, false if it is not
+
+ARRAY DESTRUCTION - 
+Lets you unpack values from an array....always unpacks from the starting index and stores them in [] console.log([first,second]);
+        //Array Destruction     
+        let a =[9,2,3,4,5];
+        let [first,second]=a;    //[9,2]
+        console.log([first,second]);
+        console.log(first);      // 9 
+        console.log(second);     // 2
+
+
+SPREAD OPERATOR - jb array ko todna hota hai
+Data ko update krne k liye bhi use hota hai SPREAD OPERATOR
+
+jb kisi array ya object ko kisi aur variable me assign krte hain to array ka data nhi jaata usme...balki array ka reference jaata hai
+to ek ko change kiye to doosra bhi change jo jaayega
+    let a=[11,22];
+    let b=a;
+    console.log(a);   //[11,22]
+    console.log(b);   //[11,22]
+
+    b[0]="Aditya";
+    console.log(b);   //[11,22,"Aditya"]
+    console.log(a)    //[11,22,"Aditya"]
+
+SPREAD OPERATOR array k reference ko store krne k bajaaye copy store krne k liye bhi use hota hai taaki ek array change ho to uske parallelly uska original array change na ho
+    let c=[33,44];
+    let d= [...c];    //Spread Operator  
+    c[0]="Anuj";
+    console.log(c);               // ["Anuj",44]
+    console.log(d);               // [33,44]
+
+
+REST OPERATOR - tukdo me values aa rhi hain aur unn values ko REST OPERATOR combine kr rha hai in the form of array
+
+REST OPERATOR - to concatenate values
+        let a=[1,2];
+        let b=[3,4];
+
+        let c= a.concat(b); 
+        console.log(c);     // [1,2,3,4]
+
+        c=[...a,...b]       //Rest Operator
+        console.log(c);     // [1,2,3,4]
+
+FUNCTION INSIDE AN ARRAY - 
+
+        let x= ()=>{
+            console.log("Hello x, how are you");
+            return HEY;
+        }
+        let array=[22,33,x,55];
+        console.log(array[2]);      // to access the function that is inside an array   
+        console.log(array[2]());    // to call the function that is inside an array
+
+
+OBJECTS - 
+
+        let user={
+            name: "Jalebi Bai",
+            kaam: "Jalebi Bechna"
+        };
+        console.log(user);
+    //FIRST WAY TO ACCESS THE VALUES
+        console.log(user.name);
+        console.log(user.kaam);
+
+    //MODIFYING THE VALUES
+        user.name= "Madhu";
+        user.kaam= "Mad-hosh hona";
+
+    //ADDING NEW KEY-VALUE PAIRS
+        user.dhaam="Mad-hosh hoke sona";
+        console.log(user);
+        console.log(user.name);
+        console.log(user.kaam);
+        console.log(user.dhaam);
+
+    //SECOND WAY TO ACCESS THE VALUES
+        console.log(["name"])    //Prints in the form of an array
+
+    //DELETING ANY ATTRIBUTE
+        delete user.kaam;        //To delete the whole property
+        console.log(user);
+
+
+OBJECT DESTRUCTION - 
+same as array destruction
+Lets you unpack key-values from an object....always unpacks using keys and stores them in {}...uses 'const'
+        const {name,roll,address} = user;        // Ye ek alag memory allocation hai jo const hai....mtlb isko change nhi kr skte agar ye const hai to
+        console.log(name);        //Manju
+        console.log(roll);        //21
+        console.log(address);     //undefined because this key does not exist
+
+SPREAD OPERATOR - SHALLOW COPY aur data ko update  krne k liye use hota hai
+
+ //SPREAD OPERATOR - to update data
+
+        const user={
+            name:"Birju",
+            role:"User"
+        };
+
+        const updatedUser={
+            ...user,
+            role:"Admin",
+            city:"Gorakhpur"
+        };
+
+        console.log(updatedUser);
+
+NOTE - CONST TYPE OF OBJECT - CONST KA KHELAA
+
+        user.name="Arju";
+        console.log(user);                
+        //output - const user={
+            name:"Arju",
+            role:"User"
+        };
+
+//the whole const object cannot be changed but its attributes can be changed even if the object is const
+
+//YOU CANNOT CHANGE THE TYPE OF ANY CONST VARIABLE BUT YOU CAN CHANGE THE VALUES INSIDE IT WITHOUT CHANGING ITS TYPE
+        //user="HALALALALU";       WRONG
+
+//YOU CANNOT CHANGE THE WHOLE EXISTING OBJECCT INTO ANOTHER OBJECT
+        // updatedUser={           WRONG
+        //     naam:"JalebiBai",
+        //     kaam:"Jalebi Banana"
+        // };
+        console.log(updatedUser);
+
+NOTE - CONST KA EK AUR KHELAA
+
+//Agar object ka destruction kr rhe const me memory allocate kr k to uss new destructed value ko change nhi kr skte but object k andr usko change kr skte hain
+        const user1={
+            name:"Birju",
+            role:"User"
+        };
+        user1.name="Arjun";
+        console.log(user1);        //{name: 'Arjun', role: 'User'}
+
+        const {role} = user1;
+        // role="Admin";           Wrong
+        user1.role="Admin";       
+        console.log(user1)         // {name: 'Arjun', role: 'Admin'}
+
+
+ACCESSING KEYS, VALUES AND ENTRIES - 
+
+ // Accessing keys of the object in the form of 1D array
+        let keys=Object.keys(user);
+        // Accessing values of the object in the form of 1D array
+        let values=Object.values(user);
+        // Accessing entries of the object in the form of 2D array
+        let entries=Object.entries(user);
+
+        console.log(keys);          //(11) ['name', 'course', 'roll', 'city', 'weight', 'height', 'gender', 'hasGf', 'hobbies', 'age', 'maritalStatus']
+        console.log(values);        //(11) ['Adi', 'B.Tech', 6, 'Gorakhpur', 60, 5.11, 'Male', true, Array(5), 23, 'Single']
+        console.log(entries);       //(11) [Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2)]
+        
+//Accessing individual keys
+        Object.keys(user).forEach((element)=>{       
+            console.log(element);
+        });
+//Accessing individual values
+        Object.values(user).forEach((element)=>{
+            console.log(element);
+        });
+//Accessing individual key-value pairs
+        Object.entries(user).forEach((element)=>{
+            console.log(element[0]+"-"+element[1]);
+        });
+
+
+//Checking if the object's keys consists of a specific key
+        console.log((Object.keys(user)).includes("name"));
+//Checking if the object itself consists of a specific key
+        console.log(user.hasOwnProperty("name"));
+
+
+//OBJECT ALSO STORES REFERENCE OF ANOTHER OBJECT
+        let user={
+            name:"Aditi",
+            cource:"B.Tech",
+            address:{
+                city:"Gorakhpur",
+                state:"UP",
+                pincode:273001
+            },
+            semester:7,
+            roll:3
+        };
+
+        console.log(user);
+        console.log(user.address);
+        console.log(user.address.city);
+
+               let add=user.address;
+        add.city="Unnao";
+        console.log(user.address)  //{city: 'Unnao', state: 'UP', pincode: 273001}
+
+        let user1=user;
+    //SHALLOW COPY  -  passing the reference
+        user1.name="Aditya";
+        console.log(user);    //{name: 'Aditya', cource: 'B.Tech', address: {…}, semester: 7, roll: 3}
+
+    //SHALLOW COPY
+        let user2={
+            ...user
+        };
+        console.log("------");
+        user2.name="Adi";
+        console.log(user2);       //{name: 'Adi', cource: 'B.Tech', address: {…}, semester: 7, roll: 3}
+        console.log(user);        //{name: 'Aditya', cource: 'B.Tech', address: {…}, semester: 7, roll: 3}
+    //THE SHALLOW COPY PROBLEM -
+        user2.address.city="GKP";
+        console.log(user) //{name: 'Aditya', cource: 'B.Tech', address: {…}, semester: 7, roll: 3}
+        console.log(user.address);   //{city: 'GKP', state: 'UP', pincode: 273001}
+
+    //Purana Solution
+    // DEEP COPY - SOLVES THE SHALLOW COPY PROBLEM
+    //Stringify then parse the value - reference vala koi jhanjhat nhi hai
+        let temp=JSON.stringify(user);  //object ko string me change krta hai stringify
+        console.log(user);
+        let user3 = JSON.parse(temp);   //string ko object me convert krta hai parse
+        console.log(user3);
+        user3.address.city="Mumbai";
+        console.log(user3.address);      //{city: 'Mumbai', state: 'UP', pincode: 273001}
+        console.log(user.address);       //{city: 'GKP', state: 'UP', pincode: 273001}
+
+
+    //New Method
+    let user4=structuredClone(user);     //Clone krta hai copy nhi
+    console.log(user3);
+    user4.address.city="Agra";
+    console.log(user4.address);      //{city: 'Agra', state: 'UP', pincode: 273001}
+    console.log(user.address);       //{city: 'GKP', state: 'UP', pincode: 273001}
+
+//Access krna obejct ko - 
+    []-(subscript) se dynamic keys ko access kr skte hain aur generate bhi
+    . - (dot operator) se dynamic keys ko access nhi kr skte
+
+//ALIAS DESTRUCTING
+    const {name:fullName}=user;  
+    //ab iss name ko individually access krne k liye 'fullName' use krte hain

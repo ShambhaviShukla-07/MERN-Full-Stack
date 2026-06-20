@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=[11,22];
+        let b=a;
+        console.log(a);   //[11,22]
+        console.log(b);   //[11,22]
+
+        b[0]="Aditya";
+        console.log(b);   //[11,22,"Aditya"]
+        console.log(a)    //[11,22,"Aditya"]
+
+        let c=[33,44];
+        let d= [...c];    //Spread Operator  
+        c[0]="Anuj";
+        console.log(c);
+        console.log(d);
+    </script>
+</body>
+</html>

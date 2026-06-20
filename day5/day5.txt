@@ -1,0 +1,81 @@
+GRID
+display:grid    --->    rows columns k form me elements ko divide kr deta hai parent k basis pe
+grid-template-columns:2fr 1fr 3fr    --->   kaise aur kitne parts me divide hoga
+fr - fractions (parent me jitna bachega utna batega) - 200px 1fr 1fr
+% - poore ka nikalta hai (parent k poore hisse ka) - to 200px 50% 50% glt ho jaayega
+
+fr- works on remaining part
+% - works on whole
+px - fixed measurement
+em - default font-size k basis pe 2em- 2 times of default font size
+1em=16px
+
+grid-template-rows: same as column
+grid-template: 60% 1fr / 200px 1fr
+grid-template: rows division / column division
+
+grid-column-start: start kis column see kre
+grid-column-end: end kis column se pehle hoga (n-1)
+same for grid-row-start and grid-row-end
+
+grid-column-start:2
+grid-column-end: span 3
+
+grid-area accepts four values separated by slashes: grid-row-start, grid-column-start, grid-row-end, followed by grid-column-end.
+One example of this would be grid-area: 1 / 1 / 3 / 6;.
+
+ORDER
+positive-baad me
+negative-pehle
+0-wnhi pe
+
+background-image: url('') 
+LINEAR-GRADIENT - rgba ka a transparency define krta hai 0-1
+vh - view height
+vw - view width
+
+background-size:
+contain - height k hisab se image fit krta hai
+cover - width k hisab se image ko fit krta hai
+100% 100% - poora image fit krta hai
+image ka size agar container se zada hai to vo by default usko repeat krega
+isko rokne k liye background-repeat: no-repeat set krenge
+no-repeat, repeat-x, repeat-y
+background-repeat: no-repeat;
+
+background-position:
+left, bottom, top, right, left top, top right, left bottom, center, etc
+
+background-attachment:fixed ;
+
+text-shadow: 3px 3px 3px gray;   ----> x,y,radius,colour   -Radius jitna km rhega utna sharp dikhega aur jitna zada rhega utna blur
+box-shadow:5px 5px 5px black;
+
+
+node.js - runtime environment for JS
+
+window - object jo poore browser window ko control kr skta hai
+document - object jo poore document ko control kr skta hai
+dot operator (.) - object k properties ko access krne k liye
+
+document.write()  - to write on the webpage through script which converts it to HTML first
+document.write("This is JS <br> Good Job")
+agar script head me likhenge to runtime yaani browser k console pe agar run karaye to body ka baaki sb kuchh udd jaayega 
+script hamesha body k end hone se pehle likhte hain taaki pehle body load ho jaaye fir script 
+agar script ko pehle likh diye to body ko access hi nhi kr paayega pehle vo
+
+document.loaction  - 
+window.alert() - function
+
+HTMLCollection - array
+
+a[0].innerHTML="Full Stack Wala Developer<br> <hr>"   - isme tags kaam krenge
+a[0].innerText="full stack <br><hr>"   -   sb kuchh text me dikhega tags bhi - isme \n kaam krega...innerText \n ko br tag me change kr dikhega
+aur innterText hamesha HTML tag return krega 
+innerHTML text return krega - isme \n kaam nhi krta 
+
+document.getElementsByTagName()
+document.getElementById()
+document.getElementsByClassName()
+document.querySelector()
+document.querySelectorAll()

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user={
+            name:"Aditi",
+            cource:"B.Tech",
+            address:{
+                city:"Gorakhpur",
+                state:"UP",
+                pincode:273001
+            },
+            semester:7,
+            roll:3
+        };
+
+        console.log(user);
+        console.log(user.address);
+        console.log(user.address.city);
+
+        let add=user.address;
+        add.city="Unnao";
+        console.log(user.address)  //{city: 'Unnao', state: 'UP', pincode: 273001}
+
+        let user1=user;
+    //SHALLOW COPY  -  passing the reference
+        user1.name="Aditya";
+        console.log(user);    //{name: 'Aditya', cource: 'B.Tech', address: {…}, semester: 7, roll: 3}
+
+    //SHALLOW COPY
+        let user2={
+            ...user
+        };
+        console.log("------");
+        user2.name="Adi";
+        console.log(user2);       //{name: 'Adi', cource: 'B.Tech', address: {…}, semester: 7, roll: 3}
+        console.log(user);        //{name: 'Aditya', cource: 'B.Tech', address: {…}, semester: 7, roll: 3}
+    //THE SHALLOW COPY PROBLEM -
+        user2.address.city="GKP";
+        console.log(user) //{name: 'Aditya', cource: 'B.Tech', address: {…}, semester: 7, roll: 3}
+        console.log(user.address);   //{city: 'GKP', state: 'UP', pincode: 273001}
+
+    //Purana Solution
+    // DEEP COPY - SOLVES THE SHALLOW COPY PROBLEM
+    //Stringify then parse the value - reference vala koi jhanjhat nhi hai
+        let temp=JSON.stringify(user);  //object ko string me change krta hai stringify
+        console.log(user);
+        let user3 = JSON.parse(temp);   //string ko object me convert krta hai parse
+        console.log(user3);
+        user3.address.city="Mumbai";
+        console.log(user3.address);      //{city: 'Mumbai', state: 'UP', pincode: 273001}
+        console.log(user.address);       //{city: 'GKP', state: 'UP', pincode: 273001}
+
+
+    //New Method
+    let user4=structuredClone(user);     //Clone krta hai copy nhi
+    console.log(user3);
+    user4.address.city="Agra";
+    console.log(user4.address);      //{city: 'Agra', state: 'UP', pincode: 273001}
+    console.log(user.address);       //{city: 'GKP', state: 'UP', pincode: 273001}
+    
+//ALIAS DESTRUCTING
+    const {name:fullName}=user;  
+    //ab iss name ko individually access krne k liye 'fullName' use krte hain
+
+//DEFAULT VALUE DESTRUCTING
+const {age=21}=user;
+// age agar hoga user me to uski value aayegi wrna 21 as default value jaayegi
+   
+let fees={
+    name:"Manjesh",
+    total:3000,
+    paid:500,
+    dues:2500
+};
+let student={
+    ...user,
+    ...fees
+}
+console.log(student)   //{name: 'Manjesh', cource: 'B.Tech', address: {…}, semester: 7, roll: 3, …}
+
+let stu={              
+    ...user
+} 
+//Same key ho to value update ho jaayegi, i.e. overwrite ho jaayegi
+console.log(student)   //{name: 'Manjesh', cource: 'B.Tech', address: {…}, semester: 7, roll: 3, }
+
+//Safe access of object
+console.log(user?.permanent?.city)
+// user k andr permanent k andr city agar ho to thik wrna undefined return krega
+// agar ? na lagaye to permanent naam ka agar koi inner object nhi hoga aur uske andr city bhi nhi hogi to error k bajaye undefined hi print krega
+
+   </script> 
+</body>
+</html>

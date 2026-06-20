@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a =[9,2,3,4,5];
+        let result=a.reduce(function(sum,num){   //sum-initial value(0) and num is every element inside array a
+            return sum + num;
+        },0);      //Initial values starts from 0
+        console.log(result);           // 23
+        //Accumulator has an initial value of 0 and then starts storing everything inside it
+        let res=a.reduce((s,num)=>{
+            return s+num
+        },0);
+        console.log(res);              // 23
+
+        let r=a.reduce(function(sum,no){
+            if(no%2==0)
+                return sum+no
+            return sum 
+        });                            //INITIAL value - 9 (the first value in the array)
+        console.log(r);                // 15
+
+        console.log(typeof(a));
+        console.log(Array.isArray(a));
+        console.log(Array.isArray(res));
+
+        //Array Destruction
+        let [first,second]=a;
+        console.log([first,second]);
+        console.log(first);
+        console.log(second);
+    </script>
+</body>
+</html> 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user={
+            name:"Adi",
+            course:"B.Tech",
+            roll:6,
+            city:"Gorakhpur",
+            weight:60,
+            height: 5.11,
+            gender: "Male",
+            hasGf: true,
+            hobbies: ["Movie dekhna","Sonaa","Khaana Banana","Khaana Khaana","Anime Dekhna"],
+            age:23,
+            maritalStatus: "Single"
+        };
+
+// Accessing keys of the object in the form of 1D array
+        let keys=Object.keys(user);
+// Accessing values of the object in the form of 1D array
+        let values=Object.values(user);
+// Accessing entries of the object in the form of 2D array
+        let entries=Object.entries(user);
+
+        console.log(keys);          //(11) ['name', 'course', 'roll', 'city', 'weight', 'height', 'gender', 'hasGf', 'hobbies', 'age', 'maritalStatus']
+        console.log(values);        //(11) ['Adi', 'B.Tech', 6, 'Gorakhpur', 60, 5.11, 'Male', true, Array(5), 23, 'Single']
+        console.log(entries);       //(11) [Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2)]
+        
+
+//Accessing individual keys
+        Object.keys(user).forEach((element)=>{       
+            console.log(element);
+        });
+//Accessing individual values
+        Object.values(user).forEach((element)=>{
+            console.log(element);
+        });
+//Accessing individual key-value pairs
+        Object.entries(user).forEach((element)=>{
+            console.log(element[0]+"-"+element[1]);
+        });
+
+//Checking if the object's keys consists of a specific key
+        console.log((Object.keys(user)).includes("name"));
+//Checking if the object itself consists of a specific key
+        console.log(user.hasOwnProperty("name"));
+    </script>
+</body>
+</html>
